@@ -194,10 +194,10 @@
                 
                 <div align="center"><h3>Accessing the dataset</h3></div>
                 <p>
-                    Peer review anonymity constraints require that we use this repository to host our dataset prior to publication. Unfortunately, Github's file size limits make it impossible to host it here, as it exceeds 1 TB. Upon acceptance, we will migrate this website to a deanonymized host, where anyone will be able to download it in full.
+                    Peer review anonymity constraints require that we use this repository to host our dataset prior to publication. Unfortunately, Github's file size limits make it impossible to host it here. Upon acceptance, we will migrate this website to a deanonymized host, where anyone will be able to download it in full.
                 </p>
                 <p>
-                    Until then, we provide a compressed version of our dataset, together with a python decompressor script that you can run to locally recover our full dataset. Proceed as follows (this assumes you have <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">conda</a> installed):
+                   Until then, we provide a compressed version of a portion of our dataset, together with a python decompressor script that you can run to locally decompress it. Proceed as follows (this assumes you have <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">conda</a> installed):
                 </p>
                 <ol>
                 <li>
@@ -213,6 +213,7 @@
                 <p>where [NAME_OF_SUBSET] is the name of any one of the folders in the compressed-dataset directory; for example,</p>
                 <code><p>python decompress.py Bottle</p></code>
                 <p>If you omit [NAME_OF_SUBSET] and just run <code>python decompress.py</code>, it will decompress the entire dataset. <strong>Be careful running this without arguments as it may take a long time and will require you to have 1 TB of free space on your machine.</strong></p>
+                <p>Due to file size restrictions, only the Bottle, BeerBottle and Bowl subsets are available for download right now. We will include the rest of our compressed dataset upon publication.</strong></p>
                 </ol>
                 <p>After decompressing, the structure of the dataset will be</p>
                 <pre>
