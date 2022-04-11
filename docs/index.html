@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Breaking Bad Dataset" />
+        <meta name="author" content="anonymous" />
+
+        <title>Breaking Bad Dataset</title>
+        <!-- Bootstrap core CSS -->
+        <!--link href="bootstrap.min.css" rel="stylesheet"-->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+
+        <!-- Custom styles for this template -->
+        <link href="offcanvas.css" rel="stylesheet" />
+        <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+        <style type="text/css">
+            .container {
+                zoom: 1;
+                margin-left: auto;
+                margin-right: auto;
+                vertical-align: middle;
+                width: 100%;
+                max-width: 1000px;
+            }
+            .container_img {
+                zoom: 1;
+                margin-left: auto;
+                margin-right: auto;
+                vertical-align: middle;
+                width: 100%;
+                max-width: 1200px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container" align="center">
+                <h2>
+                    Breaking Bad: A Dataset for Geometric Fracture and Reassembly
+                </h2>
+                <h4>Under Review at SGP 2022</h4>
+                <p>Anonymous Authors</p>
+            </div>
+        </div>
+
+        <div class="section">
+
+            <div class="container_img">
+                <p align="center">
+                    <img
+                        border="0"
+                        src="data/imgs/teaser.png"
+                        style="width: 90%"
+                    />
+                </p>
+            </div>
+            <div align="center"><h2>Dataset</h2></div>
+            <hr />
+            <p>
+                    Our Breaking Bad Dataset contains around 10k meshes from
+                    PartNet and Thingi10k. For each mesh, we pre-compute 20
+                    fracture modes and then simulate 80 fractures from them,
+                    resulting in a total of 1,047,400 breakdown patterns. We
+                    divide our dataset into three subsets, namely,
+                    <b>everyday</b>, <b>artifact</b> and <b>other</b> to
+                    faciliate different applications.
+                </p>
+            <div class="container_img">
+                <div class="row align-items-center">
+                    <div class="col-md-2 padding-0 canvas-row">
+                        <h4></h4>
+                        <model-viewer
+                            alt="Object"
+                            src="data/imgs/headline/ball/ball_ori.glb"
+                            style="
+                                width: 100%;
+                                height: 250px;
+                                background-color: #ffffff;
+                            "
+                            exposure=".8"
+                            camera-orbit="90deg 90deg 105%"
+                            auto-rotate
+                            camera-controls
+                        >
+                        </model-viewer>
+                    </div>
+                    <div class="col-md-2 padding-0 canvas-row">
+                        <h4> </h4>
+                        <model-viewer
+                            alt="Object"
+                            src="data/imgs/headline/ball/ball_frac.glb"
+                            style="
+                                width: 100%;
+                                height: 250px;
+                                background-color: #ffffff;
+                            "
+                            exposure=".8"
+                            camera-orbit="90deg 90deg 105%"
+                            auto-rotate
+                            camera-controls
+                        >
+                        </model-viewer>
+                    </div>
+
+                    <div class="col-md-2 padding-0 canvas-row">
+                        <h4></h4>
+                        <model-viewer
+                            alt="Object"
+                            src="data/imgs/headline/man/man_ori.glb"
+                            style="
+                                width: 100%;
+                                height: 250px;
+                                background-color: #ffffff;
+                            "
+                            exposure=".8"
+                            camera-orbit="-90deg 90deg 105%"
+                            auto-rotate
+                            camera-controls
+                        >
+                        </model-viewer>
+                    </div>
+                    <div class="col-md-2 padding-0 canvas-row">
+                        <h4> </h4>
+                        <model-viewer
+                            alt="Fracture"
+                            src="data/imgs/headline/man/man_frac.glb"
+                            style="
+                                width: 100%;
+                                height: 250px;
+                                background-color: #ffffff;
+                            "
+                            exposure=".8"
+                            camera-orbit="-90deg 90deg 105%"
+                            auto-rotate
+                            camera-controls
+                        >
+                        </model-viewer>
+                    </div>
+
+                    <div class="col-md-2 padding-0 canvas-row">
+                        <h4></h4>
+                        <model-viewer
+                            alt="Object"
+                            src="data/imgs/headline/cup/cup_ori.glb"
+                            style="
+                                width: 100%;
+                                height: 250px;
+                                background-color: #ffffff;
+                            "
+                            exposure=".8"
+                            camera-orbit="90deg 90deg 105%"
+                            auto-rotate
+                            camera-controls
+                        >
+                        </model-viewer>
+                    </div>
+                    <div class="col-md-2 padding-0 canvas-row">
+                        <h4> </h4>
+                        <model-viewer
+                            alt="Fracture"
+                            src="data/imgs/headline/cup/cup_frac.glb"
+                            style="
+                                width: 100%;
+                                height: 250px;
+                                background-color: #ffffff;
+                            "
+                            exposure=".8"
+                            camera-orbit="90deg 90deg 105%"
+                            auto-rotate
+                            camera-controls
+                        >
+                        </model-viewer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loads <model-viewer> for modern browsers: -->
+                <script
+                type="module"
+                src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+            ></script>
+
+            <div class="container">
+                
+                <div align="center"><h3>Accessing the dataset</h3></div>
+                <p>
+                    Peer review anonymity constraints require that we use this repository to host our dataset prior to publication. Unfortunately, Github's file size limits make it impossible to host it here, as it exceeds 1 TB. Upon acceptance, we will migrate this website to a deanonymized host, where anyone will be able to download it in full.
+                </p>
+                <p>
+                    Until then, we provide a compressed version of our dataset, together with a python decompressor script that you can run to locally recover our full dataset. Proceed as follows (this assumes you have <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">conda</a> installed):
+                </p>
+                <ol>
+                <li>
+                    <p>Clone or download this repository</p>
+                </li>
+                <code><p>git clone git@github.com:Breaking-Bad-Dataset/Breaking-Bad-Dataset.github.io.git breaking-bad-dataset</p></code>
+                <li><p>Navigate to the compressed dataset</p></li>
+                <code><p>cd breaking-bad-dataset/compressed-dataset</p></code>
+                <li><p>Install dependencies</p></li>
+                <code>conda install -c conda-forge igl</p></code>
+                <li><p>Run decompressor script</p></li>
+                <code><p>python decompress.py [NAME_OF_SUBSET]</p></code>
+                <p>where [NAME_OF_SUBSET] is the name of any one of the folders in the compressed-dataset directory; for example,</p>
+                <code><p>python decompress.py Bottle</p></code>
+                <p>If you omit [NAME_OF_SUBSET] and just run <code>python decompress.py</code>, it will decompress the entire dataset. <strong>Be careful running this without arguments as it may take a long time and will require you to have 1 TB of free space on your machine.</strong></p>
+                </ol>
+                <p>After decompressing, the structure of the dataset will be</p>
+                <pre>
+compressed-dataset/
+├──── [category_name]/
+│     ├──── [shape_name]/
+│     |     |──── mode_0/
+|     |     |     |──── piece_0.ply
+•     •     •     •  
+•     •     •     •
+|     |     |     |──── piece_n.ply
+•     •     •
+•     •     •
+|     |     |──── mode_19/
+|     |     |     |──── piece_0.ply
+•     •     •     •  
+•     •     •     •
+|     |     |     |──── piece_n.ply 
+│     |     |──── fracture_0/
+|     |     |     |──── piece_0.ply
+•     •     •     •  
+•     •     •     •
+|     |     |     |──── piece_n.ply
+•     •     •
+•     •     •
+|     |     |──── fracture_79/
+|     |     |     |──── piece_0.ply
+•     •     •     •  
+•     •     •     •
+|     |     |     |──── piece_n.ply 
+                </pre>
+                <div align="center"><h3>Gallery</h3></div>
+                <p>Our dataset is divided into three categories:</p>
+                <ul>
+                    <li><p>
+                        The <code>artifact</code> category consists of fractures of meshes from <a href="https://ten-thousand-models.appspot.com/results.html?q=genus%3D0">Thingi10k</a> which are tagged as "sculpture" or "scan", for use in archelogical reconstruction. <a href="artifact.html">Click here</a> for a gallery view of some results.
+                    </p></li>
+                    <li><p>
+                    The <code>everyday</code> category consists of fractures of all the meshes from the following 20 categories of the <a href="https://partnet.cs.stanford.edu">PartNet</a> dataset (click on the names for a result gallery view):
+                    <a href="BeerBottle.html">BeerBottle</a>,
+                    <a href="Bottle.html">Bottle</a>,
+                    <a href="Bowl.html">Bowl</a>,
+                    <a href="Cookie.html">Cookie</a>,
+                    <a href="Cup.html">Cup</a>,
+                    <a href="DrinkBottle.html">DrinkBottle</a>,
+                    <a href="DrinkingUtensil.html">DrinkingUtensil</a>,
+                    <a href="Mirror.html">Mirror</a>,
+                    <a href="Mug.html">Mug</a>,
+                    <a href="PillBottle.html">PillBottle</a>,
+                    <a href="Plate.html">Plate</a>,
+                    <a href="Ring.html">Ring</a>,
+                    <a href="Spoon.html">Spoon</a>,
+                    <a href="Statue.html">Statue</a>,
+                    <a href="Teacup.html">Teacup</a>,
+                    <a href="Teapot.html">Teapot</a>,
+                    <a href="ToyFigure.html">ToyFigure</a>,
+                    <a href="Vase.html">Vase</a>,
+                    <a href="WineBottle.html">WineBottle</a>,
+                    <a href="WineGlass.html">WineGlass</a>.
+                </p></li>
+
+                <li><p>
+                    The <code>other</code> category contains fractures of all other meshes in <a href="https://ten-thousand-models.appspot.com/results.html?q=genus%3D0">Thingi10k</a>. <a href="other.html">Click here</a> for a gallery view of some results.
+                </p></li>
+            </ul>
+            </div>
+            <br />
+            <div class="container_img">
+                <p align="center">
+                    <img
+                        border="0"
+                        src="data/imgs/categories.png"
+                        style="width: 100%"
+                    />
+                </p>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
