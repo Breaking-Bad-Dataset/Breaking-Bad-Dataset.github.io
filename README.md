@@ -1,6 +1,6 @@
 # Breaking Bad: A Dataset for Geometric Fracture and Reassembly
 
-*Under review at SGP 2022*
+*Under review at NeurIPS 2022 Datasets and Benchmarks Track*
 
 Please visit [our website](https://breaking-bad-dataset.github.io) for more information.
 
