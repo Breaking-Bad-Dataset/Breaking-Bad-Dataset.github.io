@@ -72,6 +72,8 @@ cd breaking-bad-dataset/
 ```
 3. Install dependencies
 ```bash
+conda create -n breaking-bad python=3.8
+conda activate breaking-bad
 conda install numpy scipy tqdm
 conda install -c conda-forge igl
 ```
