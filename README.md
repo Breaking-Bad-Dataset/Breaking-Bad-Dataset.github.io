@@ -6,9 +6,7 @@ Please visit [our website](https://breaking-bad-dataset.github.io) for more info
 
 ## Accessing the dataset
 
-Peer review anonymity constraints require that we use this repository to host our dataset prior to publication. Unfortunately, Github's file size limits make it impossible to host it here, as it exceeds 1 TB. Upon acceptance, we will migrate this website to a deanonymized host, where anyone will be able to download it in full.
-
-Until then, we provide a *compressed* portion of our dataset, together with a python decompressor script that you can run to locally recover the `everyday` and `artifact` categories of our dataset. Proceed as follows (this assumes you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed):
+We provide a compressed version of our dataset, together with a python decompressor script that you can run to locally decompress it. Proceed as follows (this assumes you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed):
 
 1. Clone or download this repository
 ```bash
