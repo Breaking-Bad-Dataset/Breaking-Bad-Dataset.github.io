@@ -2,9 +2,18 @@
 
 *Under review at NeurIPS 2022 Datasets and Benchmarks Track*
 
-Please visit [our website](https://breaking-bad-dataset.github.io) for interactive viewing and more dataset information.
+Please visit [our website](https://breaking-bad-dataset.github.io) for more dataset information.
 
 ## Accessing the dataset
+
+### Dataset preview
+
+Please visit [our website](https://breaking-bad-dataset.github.io) for interactive viewing of our dataset.
+
+We also provide decompressed sample data (mesh files in `obj` format) under `example_data/`.
+You can use [MeshLab](https://www.meshlab.net/) to view them.
+
+### Access the entire dataset
 
 We provide a compressed version of our dataset, together with a python decompressor script that you can run to locally decompress it. Proceed as follows (this assumes you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed):
 

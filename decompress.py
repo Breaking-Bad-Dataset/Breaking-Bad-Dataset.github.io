@@ -25,6 +25,9 @@ def decompress(category_dir, save_dir):
         mesh_dir_full_path = os.path.join(category_dir, mesh_dir)
         if not os.path.isdir(mesh_dir_full_path):
             continue
+        # skip failed meshes
+        if len(os.listdir(mesh_dir_full_path)) == 0:
+            continue
         # Read main mesh and data
         compressed_mesh_path = os.path.join(mesh_dir_full_path,
                                             "compressed_mesh.obj")
