@@ -108,7 +108,7 @@ After decompressing everything, the structure of the dataset will be
 ```
 $DATA_ROOT/
 ├──── data_split/
-├──── everyday/
+├──── everyday/ (~60G)
 │     ├──── BeerBottle/
 │     |     |──── 3f91158956ad7db0322747720d7d37e8/
 |     │     |     |──── mode_0/
@@ -137,6 +137,6 @@ $DATA_ROOT/
 |     |     |     |     |──── piece_n.obj
 •     •
 •     •
-├──── artifact/
-├──── other/
+├──── artifact/ (~40G)
+├──── other/ (~900G)
 ```
