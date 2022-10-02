@@ -3,6 +3,9 @@
 # script for downloading zip files from Dataverse and unziping them
 # comment out subsets you don't want to download
 # if this doesn't work, please download manually from Dataverse (https://doi.org/10.5683/SP3/LZNPKB)
+# Or you can try clicking the `download zip` on web browser, then cancel the download, but copy the download link
+# (in Firefox, just right click the download item and there is an option called `Copy Download Link`)
+# Then, do `wget -O $SAVE_FILENAME "$download_link"` to download the files from commandline
 
 # navigate to `data/`
 mkdir -p data

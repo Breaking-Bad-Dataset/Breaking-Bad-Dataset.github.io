@@ -1,6 +1,6 @@
 # Breaking Bad: A Dataset for Geometric Fracture and Reassembly
 
-*Under review at NeurIPS 2022 Datasets and Benchmarks Track*
+_Accepted by NeurIPS 2022 Datasets and Benchmarks Track_
 
 Please visit [our website](https://breaking-bad-dataset.github.io) for more dataset information.
 
@@ -17,11 +17,12 @@ You can use [MeshLab](https://www.meshlab.net/) to view them.
 
 We provide a compressed version of our dataset, together with a python decompressor script that you can run to locally decompress it. Proceed as follows (this assumes you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed):
 
-0. Download the Breaking Bad dataset from [Dataverse](https://doi.org/10.5683/SP3/LZNPKB) and unzip files.
-To reproduce the main results in the paper, you only need to download `everyday` and `artifact` subset as well as the `data_split.tar.gz`.
-For the `other` subset, we split the zip file into 4 parts because of the single file size limit on Dataverse.
-Refer to [here](https://unix.stackexchange.com/questions/40480/how-to-unzip-a-multipart-spanned-zip-on-linux) for how to unzip splitted zip files.
-Make sure the unzipped dataset looks like
+0. **Download the Breaking Bad dataset from [Dataverse](https://doi.org/10.5683/SP3/LZNPKB) and unzip files**.
+   To reproduce the main results in the paper, you only need to download `everyday` and `artifact` subset as well as the `data_split.tar.gz`.
+   For the `other` subset, we split the zip file into 4 parts because of the single file size limit on Dataverse.
+   Refer to [here](https://unix.stackexchange.com/questions/40480/how-to-unzip-a-multipart-spanned-zip-on-linux) for how to unzip splitted zip files.
+   Make sure the unzipped dataset looks like
+
 ```
 $DATA_ROOT/
 ├──── data_split/
@@ -71,40 +72,53 @@ $DATA_ROOT/
 •     •
 •     •
 ```
+
 1. Clone this repository
+
 ```bash
 git clone git@github.com:Breaking-Bad-Dataset/Breaking-Bad-Dataset.github.io.git breaking-bad-dataset
 ```
+
 2. Navigate to the repository
+
 ```bash
 cd breaking-bad-dataset/
 ```
+
 3. Install dependencies
+
 ```bash
 conda create -n breaking-bad python=3.8
 conda activate breaking-bad
 conda install numpy scipy tqdm
 conda install -c conda-forge igl
 ```
+
 4. Run decompressor script
+
 ```bash
 python decompress.py --data_root $DATA_ROOT --subset $SUBSET --category $CATEGORY
 ```
+
 where `$DATA_ROOT` is the path to the Breaking Bad dataset folder.
 `$SUBSET` is the name of the subset you want to process, i.e. one of `['everyday', 'artifact', 'other']`.
 You can also input `all` to decompress the entire dataset, which is very time-consuming and takes ~1T disk storage.
 `$CATEGORY` is only used for the `everyday` subset and specifies the object category you want to decompress, e.g. `Bottle`, `Bowl`.
 You can also input `all` to decompress all the categories.
 For example, to decompress the `Bottle` category in the `everyday` subset run
+
 ```bash
 python decompress.py --data_root $DATA_ROOT --subset everyday --category Bottle
 ```
+
 to decompress the `artifact` subset run
+
 ```bash
 python decompress.py --data_root $DATA_ROOT --subset artifact
 ```
 
 After decompressing everything, the structure of the dataset will be
+
 ```
 $DATA_ROOT/
 ├──── data_split/
@@ -139,4 +153,21 @@ $DATA_ROOT/
 •     •
 ├──── artifact/ (~40G)
 ├──── other/ (~900G)
+```
+
+## Reproduce the benchmark results
+
+**We release the code for reproducing our benchmark results [here](https://github.com/Wuziyi616/multi_part_assembly).**
+
+## Citation
+
+If you find this dataset useful, please consider citing our paper:
+
+```bib
+@inproceedings{sellan2022breaking,
+  title      = {Breaking Bad: A Dataset for Geometric Fracture and Reassembly},
+  author     = {Sell{\'a}n, Silvia and Chen, Yun-Chun and Wu, Ziyi and Garg, Animesh and Jacobson, Alec},
+  booktitle  = {Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year       = {2022}
+}
 ```
