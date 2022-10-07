@@ -159,6 +159,20 @@ $DATA_ROOT/
 
 **We release the code for reproducing our benchmark results [here](https://github.com/Wuziyi616/multi_part_assembly).**
 
+## Volume Constrained Version (*New!*)
+
+In the initial release of our Breaking Bad Dataset, some fractures contain small chip-like pieces (see examples with 6 or 8 pieces in our gallery).
+The imbalance in shape volumes causes difficulty in model learning.
+For example, if we sample 1,000 points per piece, the point density of small and large pieces will be very different.
+
+As an attempt to solve this issue, we create a volume constrained version of our dataset.
+In the fracture simulator, we set the minimum volume of each piece to be at least 1/40 of the total shape volume, and do rejection sampling to generate valid samples.
+We release the volume constrained version of the `everyday` and the `artifact` subset under the same [repo](https://doi.org/10.5683/SP3/LZNPKB).
+Note that, due to the constraint, some shapes cannot generate 100 valid fractures.
+
+We also benchmark the baselines on this version of data.
+See last part of the [section](https://github.com/Wuziyi616/multi_part_assembly/blob/dev/docs/model.md#geometric-assembly).
+
 ## Citation
 
 If you find this dataset useful, please consider citing our paper:
