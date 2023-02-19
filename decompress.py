@@ -24,6 +24,7 @@ The provided code under `__main__` can decompress the entire Breaking Bad
 import os
 import time
 import argparse
+from gpytoolbox.copyleft import mesh_boolean
 
 import numpy as np
 from tqdm import tqdm
@@ -79,10 +80,13 @@ def decompress_mesh(mesh_dir_full_path, save_dir):
                 continue
             ui, I, J, _ = igl.remove_duplicate_vertices(vi, fi, 1e-10)
             gi = J[fi]
+            ffi,_ = igl.resolve_duplicated_faces(gi)
+            nv,nf,IM,J = igl.remove_unreferenced(ui,ffi)
             # Now we write the mesh ui, gi
             write_file_name = os.path.join(frac_save_path,
                                            "piece_" + str(i) + ".obj")
-            igl.write_triangle_mesh(write_file_name, ui, gi)
+            # ui, gi = mesh_boolean(ui,gi,ui,gi,boolean_type='union')
+            igl.write_triangle_mesh(write_file_name, nv, nf)
             num_fracs = num_fracs + 1
 
     return num_fracs
