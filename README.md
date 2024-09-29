@@ -92,6 +92,7 @@ conda create -n breaking-bad python=3.8
 conda activate breaking-bad
 conda install numpy scipy tqdm
 conda install -c conda-forge igl
+pip install gpytoolbox==0.2.0
 ```
 
 4. Run decompressor script
